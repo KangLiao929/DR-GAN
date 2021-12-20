@@ -6,7 +6,7 @@ This is official implementation for [DR-GAN](https://ieeexplore.ieee.org/documen
 > ### Problem
 > Given a radial distortion image capture by wide-angle lens, DR-GAN aims to rectify the distortion and recover the realistic scene.
 >  ### Features
->  * The first generative framework for the distortion rectification
+>  * First generative framework for the distortion rectification
 >  * One-stage rectification (Compared to previous two-stage rectification: distortion parameter estimation -> rectification)
 >  * Label-free training (Directly learning the mapping between distorted structure and rectified structure)
 >  * Real-time rectification (~66 FPS on NVIDIA GeForce RTX 2080Ti and ~26 FPS on TITAN X)
@@ -29,6 +29,31 @@ This is official implementation for [DR-GAN](https://ieeexplore.ieee.org/documen
 git clone https://github.com/KangLiao929/DR-GAN.git
 cd DR-GAN/
 ```
+
+## Getting Started & Testing
+
+- Download the pretrained models through the following links ([generator](https://kangliao929.github.io/)), and unzip and put them into `weights/`. 
+- To test images in a folder, you can call `test.py` with the opinion `--test_path` and `--load_models`. For example:
+
+  ```bash
+  python test.py --test_num 100 --test_path ./DR-GAN/dataset/test/ --load_models ./DR-GAN/weights/generator.h5 --write_path ./DR-GAN/dataset/pre/
+  ```
+  or write / modify `test.sh` according to your own needs, then execute this script as (Linux platform):  
+  ```bash
+  sh ./test.sh
+  ```
+The visual evaluations will be saved in the folder `./dataset/pre/`.
+
+## Training
+- Generate the training dataset
+- To train DR-GAN, you can call `train.py` with the opinion `--train_path`. For example:
+  ```shell
+  python train.py --train_path ./DR-GAN/dataset/train/ --batch_size 16 --gpu "0"
+  ```
+  or write / modify `train.sh` according to your own needs, then execute this script as:  
+  ```bash
+  sh ./train.sh
+  ```
 
 ## Citation
 
