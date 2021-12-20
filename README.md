@@ -14,6 +14,22 @@ This is official implementation for [DR-GAN](https://ieeexplore.ieee.org/documen
 ![](https://github.com/KangLiao929/DR-GAN/blob/main/img/1.png) 
 ## To be continued...
 
+## Requirements
+- Python 3.5.6 (or higher)
+- Tensorflow 1.12.0
+- Keras 2.2.4
+- OpenCV
+- numpy
+- matplotlib
+- scikit-image
+
+## Installation
+
+```bash
+git clone https://github.com/KangLiao929/DR-GAN.git
+cd DR-GAN/
+```
+
 ## Citation
 
 If our method is useful for your research, please consider citing:
