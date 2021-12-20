@@ -1,7 +1,7 @@
 # DR-GAN: Automatic Radial Distortion Rectification Using Conditional GAN in Real-Time
-[Kang Liao](https://kangliao929.github.io/), Chunyu Lin, Yao Zhao, Moncef Gabbouj
 ## Introduction
 This is official implementation for [DR-GAN](https://ieeexplore.ieee.org/document/8636975) (IEEE TCSVT'20).
+[Kang Liao](https://kangliao929.github.io/), [Chunyu Lin](http://faculty.bjtu.edu.cn/8549/), [Yao Zhao](http://mepro.bjtu.edu.cn/zhaoyao/e_index.htm), [Moncef Gabbouj](https://www.tuni.fi/en/moncef-gabbouj)
 > ### Problem
 > Given a radial distortion image capture by wide-angle lens, DR-GAN aims to rectify the distortion and recover the realistic scene.
 >  ### Features
