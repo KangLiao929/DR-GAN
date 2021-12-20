@@ -1,5 +1,5 @@
 # DR-GAN: Automatic Radial Distortion Rectification Using Conditional GAN in Real-Time
-#<center>[Kang Liao](https://kangliao929.github.io/), Chunyu Lin, Yao Zhao, Moncef Gabbouj</center>
+[Kang Liao](https://kangliao929.github.io/), Chunyu Lin, Yao Zhao, Moncef Gabbouj
 ## Introduction
 This is official implementation for [DR-GAN](https://ieeexplore.ieee.org/document/8636975) (IEEE TCSVT'20).
 > ### Problem
