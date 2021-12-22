@@ -30,6 +30,10 @@ git clone https://github.com/KangLiao929/DR-GAN.git
 cd DR-GAN/
 ```
 
+## Dataset
+
+We synthesize the radial distortion image dataset including the training and test datset, based on the polynomial camera model (four distortion parameters: k1, k2, k3, and k4 involved). The synthesized dataset is avaiable [here](https://drive.google.com/drive/folders/1VAKPe3nmFVRIxVv35ueTkB2JXCsMvdfS?usp=sharing), which can be serve as a benchmark in the field of the distortion rectification. To our knowledge, there is no released distortion image dataset for training and performance evaluation.
+
 ## Getting Started & Testing
 
 - Download the pretrained models through the following links ([generator](https://drive.google.com/file/d/1dmEpGbsHIdmMDtdPxcFPPhRl9TL0TquJ/view?usp=sharing)), and unzip and put them into `weights/`. 
@@ -45,7 +49,7 @@ cd DR-GAN/
 The visual evaluations will be saved in the folder `./dataset/pre/`.
 
 ## Training
-- Generate the training dataset or download our synthesized dataset
+- Generate the training dataset or download our synthesized dataset into the path `dataset/train/`.
 - To train DR-GAN, you can call `train.py` with the opinion `--train_path`. For example:
   ```shell
   python train.py --train_path ./DR-GAN/dataset/train/ --batch_size 16 --gpu "0"
