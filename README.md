@@ -66,9 +66,9 @@ Compared to previous parameter-based methods, our DR-GAN is the first attempt at
 
 - **Blurred rectified details**. Due to the vanilla skip-connection and many downsampling layers in the generator network, our rectified images suffer from visually unpleasing details. [Our solution](https://openaccess.thecvf.com/content/CVPR2021/papers/Yang_Progressively_Complementary_Network_for_Fisheye_Image_Rectification_Using_Appearance_Flow_CVPR_2021_paper.pdf)
 - **Lack of camera parameters**. Due to directly learning the geometric transformation mapping, DR-GAN does not rely on parameter estimation. However, for other research fields such as camera calibration and SfM, the camera parameters are crucial. [Our solution](https://ieeexplore.ieee.org/document/9366359)
-- **Interpretability**. Although the generative model excels at learning the transformation given a pair, it is difficult to explain how does the network perceive different distortions of different images. As we known, the distortion features are more implicit than the semantic features, so how GAN can handle the distortion perception and distortion rectification simultaneously? Till now, we have not explored a reasonable explanation.
+- **Interpretability**. Although the generative model excels at learning the transformation given a pair, it is difficult to explain how does the network perceive different distortions of different images. In general, the distortion features are more implicit than the semantic features, so how GAN can handle the distortion perception and distortion rectification simultaneously? Till now, we have not explored a reasonable explanation for this point.
 
-If you have any suggestions or need to discuss, please feel free to contact me <kang_liao@bjtu.edu.cn>.
+If you have any suggestions or need to discuss, please feel free to contact me --- <kang_liao@bjtu.edu.cn>.
 
 ## Citation
 
