@@ -31,7 +31,9 @@ cd DR-GAN/
 
 ## Dataset
 
-We synthesize the radial distortion image dataset including the training and test data, based on the polynomial camera model (four distortion parameters: k1, k2, k3, and k4 involved). In training/test dataset, the radial distortion image and its corresponding GT are provided. The whole synthesized dataset is available [here](https://drive.google.com/drive/folders/1VAKPe3nmFVRIxVv35ueTkB2JXCsMvdfS?usp=sharing), which can serve as a benchmark in the field of distortion rectification. To our knowledge, there is no released distortion image dataset for training and performance evaluation.
+We synthesize the radial distortion image dataset including the training and test data, based on the polynomial camera model (four distortion parameters: k1, k2, k3, and k4 involved). In training/test dataset, the radial distortion image and its corresponding GT are provided in 'A' folder and 'B' folder, respectively. 
+
+The whole synthesized dataset is available [here](https://drive.google.com/drive/folders/1VAKPe3nmFVRIxVv35ueTkB2JXCsMvdfS?usp=sharing), which can serve as a benchmark in the field of distortion rectification. To our knowledge, there is no released distortion image dataset for both training and performance evaluation.
 
 ## Getting Started & Testing
 
