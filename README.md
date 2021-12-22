@@ -62,11 +62,13 @@ The visual evaluations will be saved in the folder `./dataset/pre/`.
 
 ## Limitations
 
-Compared to previous parameter-based methods, our DR-GAN is the first attempt at the generation-based solution and achieves real-time rectification. However, it has the following limitations which could be the possible effort directions for future works.
+Compared to previous parameter-based methods, our DR-GAN is the first attempt at the *generation-based solution* and achieves real-time rectification. However, it has the following limitations which could be the possible effort directions and open questions for future works.
 
 - **Blurred rectified details**. Due to the vanilla skip-connection and many downsampling layers in the generator network, our rectified images suffer from visually unpleasing details. [Our solution](https://openaccess.thecvf.com/content/CVPR2021/papers/Yang_Progressively_Complementary_Network_for_Fisheye_Image_Rectification_Using_Appearance_Flow_CVPR_2021_paper.pdf)
 - **Lack of camera parameters**. Due to directly learning the geometric transformation mapping, DR-GAN does not rely on parameter estimation. However, for other research fields such as camera calibration and SfM, the camera parameters are crucial. [Our solution](https://ieeexplore.ieee.org/document/9366359)
+- **Interpretability**. Although the generative model excels at learning the transformation given a pair, it is difficult to explain how does the network perceive different distortions of different images. As we known, the distortion features are more implicit than the semantic features, so how GAN can handle the distortion perception and distortion rectification simultaneously? Till now, we have not explored a reasonable explanation.
 
+If you have any suggestions or need to discuss, please feel free to contact me <kang_liao@bjtu.edu.cn>.
 
 ## Citation
 
@@ -80,3 +82,12 @@ If our method is useful for your research, please consider citing:
       volume={30},
       number={3},
       pages={725-733}}
+      
+    @article{liao2021deep,
+      title={A Deep Ordinal Distortion Estimation Approach for Distortion Rectification},
+      author={Liao, Kang and Lin, Chunyu and Zhao, Yao},
+      journal={IEEE Transactions on Image Processing},
+      volume={30},
+      pages={3362--3375},
+      year={2021}
+    }
