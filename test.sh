@@ -1,0 +1,1 @@
+python test.py --test_num 100 --test_path ./DR-GAN/dataset/test/ --load_models ./DR-GAN/weights/generator.h5 --write_path ./DR-GAN/dataset/pre/
