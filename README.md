@@ -32,7 +32,7 @@ cd DR-GAN/
 
 ## Getting Started & Testing
 
-- Download the pretrained models through the following links ([generator](https://kangliao929.github.io/)), and unzip and put them into `weights/`. 
+- Download the pretrained models through the following links ([generator](https://drive.google.com/file/d/1dmEpGbsHIdmMDtdPxcFPPhRl9TL0TquJ/view?usp=sharing)), and unzip and put them into `weights/`. 
 - To test images in a folder, you can call `test.py` with the opinion `--test_path` and `--load_models`. For example:
 
   ```bash
@@ -45,7 +45,7 @@ cd DR-GAN/
 The visual evaluations will be saved in the folder `./dataset/pre/`.
 
 ## Training
-- Generate the training dataset
+- Generate the training dataset or download our synthesized dataset
 - To train DR-GAN, you can call `train.py` with the opinion `--train_path`. For example:
   ```shell
   python train.py --train_path ./DR-GAN/dataset/train/ --batch_size 16 --gpu "0"
@@ -54,6 +54,10 @@ The visual evaluations will be saved in the folder `./dataset/pre/`.
   ```bash
   sh ./train.sh
   ```
+
+## Limitations
+
+
 
 ## Citation
 
