@@ -12,7 +12,6 @@ This is official implementation for [DR-GAN](https://ieeexplore.ieee.org/documen
 >  * Real-time rectification (~66 FPS on NVIDIA GeForce RTX 2080Ti and ~26 FPS on TITAN X)
 
 ![](https://github.com/KangLiao929/DR-GAN/blob/main/img/1.png) 
-## To be continued...
 
 ## Requirements
 - Python 3.5.6 (or higher)
@@ -32,7 +31,7 @@ cd DR-GAN/
 
 ## Dataset
 
-We synthesize the radial distortion image dataset including the training and test datset, based on the polynomial camera model (four distortion parameters: k1, k2, k3, and k4 involved). The synthesized dataset is avaiable [here](https://drive.google.com/drive/folders/1VAKPe3nmFVRIxVv35ueTkB2JXCsMvdfS?usp=sharing), which can be serve as a benchmark in the field of the distortion rectification. To our knowledge, there is no released distortion image dataset for training and performance evaluation.
+We synthesize the radial distortion image dataset including the training and test data, based on the polynomial camera model (four distortion parameters: k1, k2, k3, and k4 involved). In traing/test dataset, the radial distortion image and its corresponding GT are provided. The whole synthesized dataset is avaiable [here](https://drive.google.com/drive/folders/1VAKPe3nmFVRIxVv35ueTkB2JXCsMvdfS?usp=sharing), which can be serve as a benchmark in the field of the distortion rectification. To our knowledge, there is no released distortion image dataset for training and performance evaluation.
 
 ## Getting Started & Testing
 
@@ -61,6 +60,10 @@ The visual evaluations will be saved in the folder `./dataset/pre/`.
 
 ## Limitations
 
+Compared to previous parameter-based methods, our DR-GAN is the first attempt to the generation-based solution and achieves the real-time rectification. However, it has the following limitations which could be the possible effort directions for future works.
+
+- Blurred rectified details. Due to the vanilla skip-connection and many downsampling layers in the generator network, our rectified images suffer from visually unpleasing details. [Our solution](https://openaccess.thecvf.com/content/CVPR2021/papers/Yang_Progressively_Complementary_Network_for_Fisheye_Image_Rectification_Using_Appearance_Flow_CVPR_2021_paper.pdf)
+- Lack camera parameters. Due to directly learning the geometric transformation mapping, DR-GAN does not rely on the parameter estimation. However, for other research fields such as the camera calibration and SfM, the camera parameters are crucial. [Our solution](https://ieeexplore.ieee.org/document/9366359)
 
 
 ## Citation
