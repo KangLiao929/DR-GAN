@@ -72,7 +72,7 @@ If you have any suggestions or need to discuss, please feel free to contact me -
 
 ## Citation
 
-If our method is useful for your research, please consider citing:
+If our solution and open questions are useful for your research, please consider citing:
 
     @ARTICLE{liao2020drgan,
       author={Liao, Kang and Lin, Chunyu and Zhao, Yao and Gabbouj, Moncef},
@@ -82,6 +82,14 @@ If our method is useful for your research, please consider citing:
       volume={30},
       number={3},
       pages={725-733}}
+      
+    @inproceedings{yang2021progressively,
+      title={Progressively Complementary Network for Fisheye Image Rectification Using Appearance Flow},
+      author={Yang, Shangrong and Lin, Chunyu and Liao, Kang and Zhang, Chunjie and Zhao, Yao},
+      booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+      pages={6348--6357},
+      year={2021}
+    }
       
     @article{liao2021deep,
       title={A Deep Ordinal Distortion Estimation Approach for Distortion Rectification},
