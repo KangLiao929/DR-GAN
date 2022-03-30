@@ -88,7 +88,7 @@ def train_drgan():
         if ((epoch + 1) % opt.save_interval == 0):
 
             # save weights
-            save_all_weights(d, g, opt.save_models, epoch)
+            save_all_weights(g, d, opt.save_models, epoch)
 
             # save image
             batch_indexes_test = permutated_indexes_test[0 : 16]
