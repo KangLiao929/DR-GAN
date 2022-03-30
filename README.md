@@ -37,7 +37,7 @@ The whole synthesized dataset is available [here](https://drive.google.com/drive
 
 ## Getting Started & Testing
 
-- Download the pretrained models through the following links ([generator](https://drive.google.com/file/d/14euM3o6XVuya-6Uq7GY92lIS6cbaH-6A/view?usp=sharing)), and put them into `weights/`. 
+- Download the pretrained models through the following links ([generator](https://drive.google.com/file/d/1sWSbvGUW9r-YfqP2cIBAEucIQn6G5QMR/view?usp=sharing)), and put them into `weights/`. 
 - To test images in a folder, you can call `test.py` with the opinion `--test_path` and `--load_models`. For example:
 
   ```bash
