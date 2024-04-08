@@ -10,11 +10,13 @@ from network.utils import *
 import os
 
 parser = argparse.ArgumentParser()
-parser.add_argument("--test_num", type=int, default=100, help="test data num")
-parser.add_argument("--test_path", type=str, default="/data/cylin/lk/SDSE/dataset/test/", help="path of the test dataset")
-parser.add_argument("--write_path", type=str, default="./dataset/test/pre/", help="path of saving predicted images")
-parser.add_argument("--load_models", default='/data/cylin/lk/lk/DR-GAN/experiments/demo/weights/1220/generator_4.h5', help="where to load models")
-parser.add_argument("--gpu", type=str, default="2", help="gpu number")
+parser.add_argument("--test_num", type=int, default=1000, help="test data num")
+parser.add_argument("--test_path", type=str, default="/test/", help="path of the test dataset")
+parser.add_argument("--write_path", type=str, default="/results/test/", help="path of saving predicted images")
+parser.add_argument("--load_models", default='generator.h5', help="where to load models")
+parser.add_argument("--gpu", type=str, default="8", help="gpu number")
+parser.add_argument("--img_w", type=int, default=256, help="width of images")
+parser.add_argument("--img_h", type=int, default=256, help="height of images")
 opt = parser.parse_args()
 print(opt)
 
@@ -27,13 +29,13 @@ def rectify_real_image():
     g.load_weights(opt.load_models, by_name = True)
 
     # path
-    path1 = opt.test_path + "A/*.*" # distorted image
+    path1 = opt.test_path + "/*.*" # distorted image
     loc_list1 = glob(path1)
 
     for i in range(opt.test_num):
         
         src = cv2.imread(loc_list1[i])
-        src = cv2.resize(src, (img_w, img_h))
+        src = cv2.resize(src, (opt.img_w, opt.img_h))
         
         x_test = src.astype('float32')
         x_test = (x_test - 127.5) / 127.5
@@ -42,6 +44,7 @@ def rectify_real_image():
 
         s1 = time.time()
         rec = g.predict(x = x_test)
+        rec = np2img(rec)
         s2 = time.time()
         print("test time: ", s2 - s1)
 
@@ -67,8 +70,8 @@ def rectify_image():
         
         src = cv2.imread(loc_list1[i])
         gt = cv2.imread(loc_list2[i])
-        src = cv2.resize(src, (img_w, img_h))
-        gt = cv2.resize(gt, (img_w, img_h))
+        src = cv2.resize(src, (opt.img_w, opt.img_h))
+        gt = cv2.resize(gt, (opt.img_w, opt.img_h))
         
         x_test = src.astype('float32')
         x_test = (x_test - 127.5) / 127.5
@@ -95,4 +98,4 @@ def rectify_image():
     print("psnr: ", avg_psnr / opt.test_num) 
     
 if __name__ == "__main__":
-    rectify_image()
+    rectify_real_image()
