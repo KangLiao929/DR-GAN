@@ -13,6 +13,9 @@ This is the official implementation for [DR-GAN](https://ieeexplore.ieee.org/doc
 
 ![](https://github.com/KangLiao929/DR-GAN/blob/main/img/1.png) 
 
+## Updates
+Our recent work MOWA can solve multiple image warping tasks in a single and unified framework, including image rectangling, distortion rectification, and other practical tasks. Check out more details [here](https://kangliao929.github.io/projects/mowa/)!
+
 ## Requirements
 - Python 3.5.6 (or higher)
 - Tensorflow 1.12.0
