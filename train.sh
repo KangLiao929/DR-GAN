@@ -1,1 +1,1 @@
-python train.py --train_path ./DR-GAN/dataset/train/ --batch_size 16 --gpu "0"
+python train.py --train_path "./DR-GAN/dataset/train/" --batch_size 16 --gpu "0"

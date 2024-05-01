@@ -42,7 +42,7 @@ We synthesize the radial distortion image dataset including the training and tes
 - To test images in a folder, you can call `test.py` with the opinion `--test_path` and `--load_models`. For example:
 
   ```bash
-  python test.py --test_num 100 --test_path ./DR-GAN/dataset/test/ --load_models ./DR-GAN/weights/generator.h5 --write_path ./DR-GAN/dataset/pre/
+  python test.py --test_num 100 --test_path "./DR-GAN/dataset/test/" --load_models "./DR-GAN/weights/generator.h5" --write_path "./DR-GAN/dataset/pre/"
   ```
   or write / modify `test.sh` according to your own needs, then execute this script as (Linux platform):  
   ```bash
@@ -66,7 +66,7 @@ The visual evaluations will be saved in the folder `./dataset/pre/`.
 Compared to previous parameter-based methods, our DR-GAN is the first attempt at the *generation-based solution* and achieves real-time rectification. However, it has the following limitations which could be the possible effort directions and open questions for future works.
 
 - **Blurred rectified details**. Due to the vanilla skip-connection and many downsampling layers in the generator network, our rectified images suffer from visually unpleasing details. See [our solution](https://openaccess.thecvf.com/content/CVPR2021/papers/Yang_Progressively_Complementary_Network_for_Fisheye_Image_Rectification_Using_Appearance_Flow_CVPR_2021_paper.pdf).
-- **Lack of camera parameters**. Due to directly learning the geometric transformation mapping, DR-GAN does not rely on parameter estimation. However, for other research fields such as camera calibration and SfM, the camera parameters are crucial. See [our solution](https://ieeexplore.ieee.org/document/9366359).
+- **Lack of camera parameters**. Due to directly learning the geometric transformation mapping, DR-GAN does not rely on parameter estimation. However, for other research fields such as camera calibration and SfM, the camera parameters are crucial. See [our solution](https://arxiv.org/abs/2007.10689).
 - **Interpretability**. Although the generative model excels at learning the transformation given a pair, it is difficult to explain how does the network perceive different distortions of different images. In general, the distortion features are more implicit than the semantic features, so how GAN can handle the distortion perception and distortion rectification simultaneously? Till now, we have not explored a reasonable explanation for this point.
 
 If you have any suggestions or need to discuss, please feel free to contact me -- <kang_liao@bjtu.edu.cn>.
